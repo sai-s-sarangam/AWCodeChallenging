@@ -1,0 +1,19 @@
+<!--Sai: 07/11/2021: HTML for displaying Movie Libraries. I am using angular-datatables for paging/sorting/filtering-->
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Movie of movies">
+      <td>{{ Movie.ID }}</td>
+      <td>{{ Movie.Title }}</td>
+      <td>{{ Movie.Year }}</td>
+      <td>{{ Movie.Rating }}</td>
+    </tr>
+  </tbody>
+</table>
